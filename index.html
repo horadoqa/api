@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Principais Termos em APIs</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 50px;
+      color: #38bdf8;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 25px;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #38bdf8;
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+      font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      color: #cbd5e1;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      background: #0f172a;
+      color: #38bdf8;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    pre {
+      background: #020617;
+      padding: 18px;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin-top: 15px;
+      border: 1px solid #334155;
+    }
+
+    pre code {
+      color: #7dd3fc;
+      background: transparent;
+      padding: 0;
+    }
+
+    blockquote {
+      border-left: 4px solid #38bdf8;
+      padding-left: 15px;
+      margin-top: 15px;
+      color: #94a3b8;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🚀 Principais Termos em APIs</h1>
+
+    <div class="card">
+      <h2>API Integration</h2>
+      <p>É o processo de conectar diferentes sistemas ou aplicações por meio de APIs para troca de dados e automação.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Um e-commerce integrado à API dos Correios para calcular frete automaticamente.</p>
+    </div>
+
+    <div class="card">
+      <h2>API Gateway</h2>
+      <p>É uma camada intermediária que centraliza o gerenciamento das APIs, controlando autenticação, segurança, monitoramento e roteamento.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Uma empresa usa um API Gateway para controlar acesso aos serviços de pagamento, usuários e pedidos em um único ponto.</p>
+    </div>
+
+    <div class="card">
+      <h2>API Lifecycle</h2>
+      <p>Representa todo o ciclo de vida de uma API: planejamento, desenvolvimento, testes, publicação, monitoramento e descontinuação.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Uma fintech cria uma API, publica documentação, monitora uso e depois lança uma nova versão.</p>
+    </div>
+
+    <div class="card">
+      <h2>Authentication</h2>
+      <p>Processo de verificar a identidade do usuário ou sistema.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Login com usuário e senha ou uso de token JWT.</p>
+    </div>
+
+    <div class="card">
+      <h2>Authorization</h2>
+      <p>Define o que o usuário autenticado pode acessar ou executar.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Um usuário comum pode visualizar pedidos, mas apenas administradores podem excluí-los.</p>
+    </div>
+
+    <div class="card">
+      <h2>CRUD</h2>
+
+      <p>Conjunto das quatro operações básicas em sistemas:</p>
+
+      <ul>
+        <li><strong>Create</strong> → Criar</li>
+        <li><strong>Read</strong> → Ler</li>
+        <li><strong>Update</strong> → Atualizar</li>
+        <li><strong>Delete</strong> → Excluir</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong><br>
+      Cadastro de clientes em um sistema.</p>
+    </div>
+
+    <div class="card">
+      <h2>Cache</h2>
+      <p>Armazenamento temporário de dados para melhorar desempenho e reduzir consultas repetidas.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Salvar resultados de uma consulta de produtos mais acessados.</p>
+    </div>
+
+    <div class="card">
+      <h2>Client</h2>
+      <p>Aplicação ou dispositivo que consome uma API.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Um aplicativo mobile consumindo uma API de banco.</p>
+    </div>
+
+    <div class="card">
+      <h2>Method</h2>
+
+      <p>Define a ação realizada na API.</p>
+
+      <ul>
+        <li><strong>GET</strong> → Buscar dados</li>
+        <li><strong>POST</strong> → Criar dados</li>
+        <li><strong>PUT</strong> → Atualizar dados</li>
+        <li><strong>DELETE</strong> → Remover dados</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <pre><code>GET https://serverest.dev/usuarios</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Pagination</h2>
+
+      <p>Técnica usada para dividir grandes volumes de dados em páginas menores.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Mostrar 20 produtos por página em um marketplace.</p>
+    </div>
+
+    <div class="card">
+      <h2>Payload</h2>
+
+      <p>Conjunto de dados enviados em uma requisição ou resposta.</p>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <pre><code>{
+  "nome": "Hora do QA",
+  "email": "horadoqa@email.com"
+}</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Query Parameters</h2>
+
+      <p>Parâmetros enviados na URL para filtrar ou modificar consultas.</p>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <pre><code>GET https://serverest.dev/usuarios?administrador=true
+GET https://serverest.dev/produtos?nome=Logitech</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Rate Limiting</h2>
+
+      <p>Controle da quantidade de requisições permitidas em determinado período.</p>
+
+      <p><strong>Exemplo:</strong><br>
+      Máximo de 100 requisições por minuto por usuário.</p>
+
+      <blockquote>
+        Quando o limite de requisições é excedido, a API retorna o código HTTP 429 (Too Many Requests).
+      </blockquote>
+    </div>
+
+    <div class="card">
+      <h2>Request</h2>
+
+      <p>Requisição enviada pelo cliente para a API.</p>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <pre><code>GET https://serverest.dev/usuarios</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Resource</h2>
+
+      <p>Objeto ou entidade disponibilizada pela API.</p>
+
+      <ul>
+        <li><code>/usuarios</code></li>
+        <li><code>/pedidos</code></li>
+        <li><code>/produtos</code></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Response</h2>
+
+      <p>Resposta retornada pela API após uma requisição.</p>
+
+      <p><strong>Exemplo:</strong></p>
+
+      <pre><code>{
+  "status": "sucesso",
+  "mensagem": "Cliente criado"
+}</code></pre>
+    </div>
+
+    <div class="card">
+      <h2>Response Code</h2>
+
+      <p>Código HTTP que informa o resultado da operação.</p>
+
+      <ul>
+        <li><strong>200</strong> → Sucesso</li>
+        <li><strong>201</strong> → Criado com sucesso</li>
+        <li><strong>400</strong> → Requisição inválida</li>
+        <li><strong>401</strong> → Não autenticado</li>
+        <li><strong>403</strong> → Acesso negado</li>
+        <li><strong>404</strong> → Não encontrado</li>
+        <li><strong>500</strong> → Erro interno do servidor</li>
+      </ul>
+
+      <p><strong>Exemplo:</strong><br>
+      Ao criar um usuário corretamente, a API retorna <code>201 Created</code>.</p>
+    </div>
+
+    <footer>
+      🚀 Guia básico de APIs | Dark Mode Template
+    </footer>
+
+  </div>
+
+</body>
+</html>
+
