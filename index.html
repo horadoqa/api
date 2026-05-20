@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Principais Termos em APIs</title>
 
   <style>
@@ -25,10 +26,26 @@
       margin: auto;
     }
 
-    h1 {
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+    }
+
+    .logo img {
+      width: 80px;
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .logo p {
       text-align: center;
-      font-size: 42px;
-      margin-bottom: 50px;
+      font-size: 20px;
+      margin: 20px 0 50px;
+      margin-top: 0px;
       color: #38bdf8;
     }
 
@@ -39,12 +56,20 @@
       padding: 30px;
       margin-bottom: 25px;
       transition: 0.3s ease;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .card:hover {
       transform: translateY(-5px);
       border-color: #38bdf8;
+    }
+
+    h1 {
+      color: #38bdf8;
+      text-align: center;
+      margin-bottom: 40px;
+      margin-top: -50px;
+      font-size: 36px;
     }
 
     h2 {
@@ -53,9 +78,10 @@
       font-size: 28px;
     }
 
-    p {
+    a {
       margin-bottom: 15px;
       color: #cbd5e1;
+      text-decoration: none;
     }
 
     strong {
@@ -128,49 +154,80 @@
 
   <div class="container">
 
+    <div class="logo">
+      <img src="./images/hqa.png" alt="Hora do QA" />
+      <p>Hora do QA</p>
+    </div>
+
     <h1>🚀 Principais Termos em APIs</h1>
 
-    <div class="card">
+    <div class="card"> <!-- API Integration -->
       <h2>API Integration</h2>
-      <p>É o processo de conectar diferentes sistemas ou aplicações por meio de APIs para troca de dados e automação.</p>
+      <p>É o processo de conectar diferentes sistemas ou aplicações por meio de APIs para troca de dados e automação.
+      </p>
 
       <p><strong>Exemplo:</strong><br>
-      Um e-commerce integrado à API dos Correios para calcular frete automaticamente.</p>
+        Um e-commerce integrado à API dos Correios para calcular frete automaticamente.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- API Gateway -->
       <h2>API Gateway</h2>
-      <p>É uma camada intermediária que centraliza o gerenciamento das APIs, controlando autenticação, segurança, monitoramento e roteamento.</p>
+      <p>É uma camada intermediária que centraliza o gerenciamento das APIs, controlando autenticação, segurança,
+        monitoramento e roteamento.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Uma empresa usa um API Gateway para controlar acesso aos serviços de pagamento, usuários e pedidos em um único ponto.</p>
+        Uma empresa usa um API Gateway para controlar acesso aos serviços de pagamento, usuários e pedidos em um único
+        ponto.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- API Lifecycle -->
       <h2>API Lifecycle</h2>
-      <p>Representa todo o ciclo de vida de uma API: planejamento, desenvolvimento, testes, publicação, monitoramento e descontinuação.</p>
+      <p>Representa todo o ciclo de vida de uma API: planejamento, desenvolvimento, testes, publicação, monitoramento e
+        descontinuação.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Uma fintech cria uma API, publica documentação, monitora uso e depois lança uma nova versão.</p>
+        Uma fintech cria uma API, publica documentação, monitora uso e depois lança uma nova versão.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Authentication -->
       <h2>Authentication</h2>
       <p>Processo de verificar a identidade do usuário ou sistema.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Login com usuário e senha ou uso de token JWT.</p>
+        Login com usuário e senha ou uso de token JWT.</p>
+      <pre><code>
+      {
+        "email": "horadoqa@qa.com.br",
+        "password": "1q2w3e4r"
+      }
+      
+      <strong>Tem como resposta:</strong> 
+
+      {
+        "message": "Login realizado com sucesso",
+        "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImZ1bGFub0BxYS5jb20iLCJwYXNzd29yZCI6InRlc3RlIiwiaWF0IjoxNTg5NzU4NzQ2LCJleHAiOjE1ODk3Njg3NDZ9.B6TASHV8k9xBerz4NSeFBlAZGSDhZlqESt767M0567I"
+      }
+    </pre></code>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Authorization -->
       <h2>Authorization</h2>
       <p>Define o que o usuário autenticado pode acessar ou executar.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Um usuário comum pode visualizar pedidos, mas apenas administradores podem excluí-los.</p>
+        Um usuário comum pode visualizar pedidos, mas apenas administradores podem excluí-los.</p>
+
+      <pre><code>
+      {
+        "nome": "Hora do QA",
+        "email": "horadoqa@qa.com.br",
+        "password": "1q2w3e4r",
+        <strong>"administrador": "true"</strong>
+      }
+      </code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- CRUD -->
       <h2>CRUD</h2>
 
       <p>Conjunto das quatro operações básicas em sistemas:</p>
@@ -183,26 +240,89 @@
       </ul>
 
       <p><strong>Exemplo:</strong><br>
-      Cadastro de clientes em um sistema.</p>
+        Cadastro de clientes em um sistema.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Cache -->
       <h2>Cache</h2>
-      <p>Armazenamento temporário de dados para melhorar desempenho e reduzir consultas repetidas.</p>
 
-      <p><strong>Exemplo:</strong><br>
-      Salvar resultados de uma consulta de produtos mais acessados.</p>
+      <p>
+        Armazenamento temporário de dados para melhorar o desempenho e reduzir consultas repetidas.
+      </p>
+
+      <p>
+        <strong>Exemplo:</strong><br>
+        Salvar resultados de uma consulta de produtos mais acessados.
+      </p>
+
+      <h3>Tipos de cache</h3>
+
+      <ul>
+        <li>
+          <strong>Client-side cache</strong> → Armazenamento no lado do cliente
+          (ex: navegador).
+        </li>
+
+        <li>
+          <strong>Server-side cache</strong> → Armazenamento no servidor para
+          acelerar respostas.
+        </li>
+
+        <li>
+          <strong>Distributed cache</strong> → Cache compartilhado entre múltiplos
+          servidores.
+        </li>
+      </ul>
+
+      <h3>Status do cache (x-cache)</h3>
+
+      <ul>
+        <li>
+          <strong>MISS</strong> → A resposta não foi encontrada no cache e precisou
+          ser obtida do servidor de origem.
+        </li>
+
+        <li>
+          <strong>HIT</strong> → A resposta foi encontrada no cache e retornada sem
+          precisar gerar novamente no servidor.
+        </li>
+
+        <li>
+          <strong>BYPASS</strong> → A resposta foi obtida diretamente do servidor de
+          origem devido a uma regra de bypass.
+        </li>
+
+        <li>
+          <strong>EXPIRED</strong> → O conteúdo armazenado expirou e foi atualizado
+          pelo servidor de origem.
+        </li>
+
+        <li>
+          <strong>STALE</strong> → O conteúdo desatualizado foi retornado porque o
+          servidor de origem não respondeu corretamente.
+        </li>
+
+        <li>
+          <strong>UPDATING</strong> → O conteúdo antigo ainda está sendo servido
+          enquanto o cache é atualizado em segundo plano.
+        </li>
+
+        <li>
+          <strong>REVALIDATED</strong> → O conteúdo em cache foi validado junto ao
+          servidor de origem usando requisições condicionais.
+        </li>
+      </ul>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Client -->
       <h2>Client</h2>
       <p>Aplicação ou dispositivo que consome uma API.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Um aplicativo mobile consumindo uma API de banco.</p>
+        Um aplicativo mobile consumindo uma API de banco.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Method -->
       <h2>Method</h2>
 
       <p>Define a ação realizada na API.</p>
@@ -219,53 +339,59 @@
       <pre><code>GET https://serverest.dev/usuarios</code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Pagination -->
       <h2>Pagination</h2>
 
       <p>Técnica usada para dividir grandes volumes de dados em páginas menores.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Mostrar 20 produtos por página em um marketplace.</p>
+        Mostrar 20 produtos por página em um marketplace.</p>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Payload -->
       <h2>Payload</h2>
 
       <p>Conjunto de dados enviados em uma requisição ou resposta.</p>
 
       <p><strong>Exemplo:</strong></p>
 
-      <pre><code>{
-  "nome": "Hora do QA",
-  "email": "horadoqa@email.com"
-}</code></pre>
+      <pre><code>
+      {
+        "nome": "Hora do QA",
+        "email": "horadoqa@qa.com.br",
+        "password": "1q2w3e4r",
+        "administrador": "true"
+      }
+      </code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Query Parameters -->
       <h2>Query Parameters</h2>
 
       <p>Parâmetros enviados na URL para filtrar ou modificar consultas.</p>
 
       <p><strong>Exemplo:</strong></p>
 
-      <pre><code>GET https://serverest.dev/usuarios?administrador=true
-GET https://serverest.dev/produtos?nome=Logitech</code></pre>
+      <pre><code>
+        GET https://serverest.dev/usuarios?administrador=true
+        GET https://serverest.dev/produtos?nome=Logitech
+      </code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Rate Limiting -->
       <h2>Rate Limiting</h2>
 
       <p>Controle da quantidade de requisições permitidas em determinado período.</p>
 
       <p><strong>Exemplo:</strong><br>
-      Máximo de 100 requisições por minuto por usuário.</p>
+        Máximo de 100 requisições por minuto por usuário.</p>
 
       <blockquote>
         Quando o limite de requisições é excedido, a API retorna o código HTTP 429 (Too Many Requests).
       </blockquote>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Request -->
       <h2>Request</h2>
 
       <p>Requisição enviada pelo cliente para a API.</p>
@@ -275,7 +401,7 @@ GET https://serverest.dev/produtos?nome=Logitech</code></pre>
       <pre><code>GET https://serverest.dev/usuarios</code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Resource -->
       <h2>Resource</h2>
 
       <p>Objeto ou entidade disponibilizada pela API.</p>
@@ -287,20 +413,22 @@ GET https://serverest.dev/produtos?nome=Logitech</code></pre>
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Response -->
       <h2>Response</h2>
 
       <p>Resposta retornada pela API após uma requisição.</p>
 
       <p><strong>Exemplo:</strong></p>
 
-      <pre><code>{
-  "status": "sucesso",
-  "mensagem": "Cliente criado"
-}</code></pre>
+      <pre><code>
+        {
+          "message": "Cadastro realizado com sucesso",
+          "_id": "jogfODIlXsqxNFS2"
+        }
+      </code></pre>
     </div>
 
-    <div class="card">
+    <div class="card"> <!-- Response Code -->
       <h2>Response Code</h2>
 
       <p>Código HTTP que informa o resultado da operação.</p>
@@ -312,19 +440,34 @@ GET https://serverest.dev/produtos?nome=Logitech</code></pre>
         <li><strong>401</strong> → Não autenticado</li>
         <li><strong>403</strong> → Acesso negado</li>
         <li><strong>404</strong> → Não encontrado</li>
+        <li><strong>429</strong> → Too Many Requests</li>
         <li><strong>500</strong> → Erro interno do servidor</li>
       </ul>
 
       <p><strong>Exemplo:</strong><br>
-      Ao criar um usuário corretamente, a API retorna <code>201 Created</code>.</p>
+        Ao criar um usuário corretamente, a API retorna <code>201 Created</code>.</p>
+    </div>
+
+    <div class="card"> <!-- Tools -->
+      <h2>Ferramentas</h2>
+
+      <p>Algumas ferramentas utilizadas para interagir com a API.</p>
+
+      <ul>
+        <li><a href="https://curl.se/"><strong>cURL</strong></a> - Ferramenta utilizada para realizar requisições HTTP via terminal, muito usada para testes rápidos de APIs e automações.</li>
+        <li><a href="https://www.postman.com/"><strong>Postman</strong></a> - Plataforma popular para testar, documentar e automatizar APIs com uma interface intuitiva e suporte a coleções.</li>
+        <li><a href="https://insomnia.rest/"><strong>Insomnia</strong></a> - Cliente REST leve e moderno para testes de APIs REST e GraphQL, focado em produtividade e simplicidade.</li>
+        <li><a href="https://swagger.io/"><strong>Swagger</strong></a> - Ferramenta utilizada para criar, visualizar e documentar APIs seguindo a especificação OpenAPI.</li>
+        <li><a href="https://hoppscotch.io/"><strong>Hoppscotch</strong></a> - Plataforma web leve e rápida para testar APIs REST, GraphQL e WebSocket diretamente no navegador.</li>
+      </ul>
     </div>
 
     <footer>
-      🚀 Guia básico de APIs | Dark Mode Template
+      🚀 Guia básico de APIs | Hora do QA
     </footer>
 
   </div>
 
 </body>
-</html>
 
+</html>
